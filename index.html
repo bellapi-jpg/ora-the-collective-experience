@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORA | Urban Rituals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Instrument+Serif:ital,wght@0,400;1,400&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --butter: #FFF7AD;
+            --espresso: #1A0F0E;
+            --blush: #FF9494;
+            --sage: #C1D0B5;
+            --cream: #FAF9F6;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream);
+            color: var(--espresso);
+            overflow-x: hidden;
+        }
+        .unbounded { font-family: 'Unbounded', sans-serif; }
+        .serif { font-family: 'Instrument Serif', serif; }
+        
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0.03;
+            z-index: 9999;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        .bg-butter { background-color: var(--butter); }
+        .bg-blush { background-color: var(--blush); }
+        .bg-sage { background-color: var(--sage); }
+        .text-espresso { color: var(--espresso); }
+        .border-espresso { border-color: var(--espresso); }
+
+        .sticker {
+            display: inline-block;
+            padding: 4px 12px;
+            border: 2px solid var(--espresso);
+            border-radius: 99px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 10px;
+            letter-spacing: 0.1em;
+            background: white;
+            box-shadow: 2px 2px 0px var(--espresso);
+        }
+
+        .btn-hard {
+            border: 2px solid var(--espresso);
+            box-shadow: 4px 4px 0px var(--espresso);
+            transition: all 0.2s;
+        }
+        .btn-hard:active {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px var(--espresso);
+        }
+
+        .chat-bubble-me {
+            background-color: var(--blush);
+            border: 2px solid var(--espresso);
+            box-shadow: -4px 4px 0px var(--espresso);
+            border-radius: 24px 24px 4px 24px;
+        }
+        .chat-bubble-them {
+            background-color: white;
+            border: 2px solid var(--espresso);
+            box-shadow: 4px 4px 0px var(--espresso);
+            border-radius: 24px 24px 24px 4px;
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
