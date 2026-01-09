@@ -1,0 +1,8 @@
+{
+  "name": "ORA | Urban Rituals",
+  "description": "Plataforma curada para pequenos grupos de mulheres combinarem rituais urbanos.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ]
+}
